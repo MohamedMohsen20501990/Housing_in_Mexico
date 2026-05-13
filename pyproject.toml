@@ -3,7 +3,7 @@ requires = ["flit_core >=3.2,<4"]
 build-backend = "flit_core.buildapi"
 
 [project]
-name = "housing_in_mexico"
+name = "housing_in_mexico."
 version = "0.0.1"
 description = "Housing in mexico using Linear regression model."
 authors = [
