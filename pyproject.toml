@@ -5,7 +5,7 @@ build-backend = "flit_core.buildapi"
 [project]
 name = "housing_in_mexico"
 version = "0.0.1"
-description = "A short description of the project."
+description = "Housing in mexico using Linear regression model."
 authors = [
   { name = "Mohamed" },
 ]
