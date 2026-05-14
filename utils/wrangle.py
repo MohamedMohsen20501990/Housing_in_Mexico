@@ -40,7 +40,7 @@ def wrangle_data(path):
     df.drop(columns=["price_aprox_local_currency","price_aprox_usd", "price_per_m2","price"], inplace=True)
     
     # drop the low and high cardinality columns
-    df.drop(columns=["currency","properati_url","operation"], inplace=True)
+    df.drop(columns=["currency","properati_url","operation","property_type", "state"], inplace=True)
     
     # drop place with parents names column and lat-lon columns
     df.drop(columns=["lat-lon","place_with_parent_names"], inplace=True, errors="ignore")
