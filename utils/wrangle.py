@@ -1,5 +1,16 @@
 import pandas as pd
 def wrangle_data(path):
+    """
+    Manipulate the uncleaned data
+    
+
+    Args:
+        path(str):the path of the data
+
+    Returns:
+        DataFrame: cleaned Dataframe
+    """
+    
     # creating a data frame 
     df = pd.read_csv(path)
     
