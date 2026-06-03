@@ -11,8 +11,7 @@ st.write(
     
     """
 )
-
-st.image("D:\python\codezilla\Projects\housing_in_mexico\mexico.jpg")
+st.image("mexico.jpg")
 
 st.sidebar.header("User Input Parameters")
 
@@ -34,7 +33,7 @@ df = user_input_features()
 st.subheader("User Input Parameters")
 st.write(df)
 
-model = joblib.load("D:\python\codezilla\Projects\housing_in_mexico\models\model.pkl")
+model = joblib.load("models/model.pkl")
 
 prediction = model.predict(df)
 st.subheader("Price for this house in USD is: ")
