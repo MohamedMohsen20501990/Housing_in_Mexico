@@ -1,56 +1,115 @@
-# housing_in_mexico
+🏠 Mexico Housing Price Prediction
 
-<a target="_blank" href="https://cookiecutter-data-science.drivendata.org/">
-    <img src="https://img.shields.io/badge/CCDS-Project%20template-328F97?logo=cookiecutter" />
-</a>
+An end-to-end Machine Learning project for predicting housing prices in Mexico using a Random Forest Regressor.
 
-A short description of the project.
+The project covers the complete workflow from data preparation and model training to automated testing, API development, containerization, and cloud deployment.
 
-## Project Organization
+🚀 Project Workflow
+Raw Data
+   ↓
+Data Wrangling
+   ↓
+Model Training
+   ↓
+Saved ML Model
+   ↓
+FastAPI
+   ↓
+Pytest
+   ↓
+Docker
+   ↓
+Docker Hub
+   ↓
+Azure Container Apps
 
-```
-├── LICENSE            <- Open-source license if one is chosen
-├── Makefile           <- Makefile with convenience commands like `make data` or `make train`
-├── README.md          <- The top-level README for developers using this project.
-├── data
-│   ├── external       <- Data from third party sources.
-│   ├── interim        <- Intermediate data that has been transformed.
-│   ├── processed      <- The final, canonical data sets for modeling.
-│   └── raw            <- The original, immutable data dump.
-│
-├── docs               <- A default mkdocs project; see www.mkdocs.org for details
-│
-├── models             <- Trained and serialized models, model predictions, or model summaries
-│
-├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-│                         the creator's initials, and a short `-` delimited description, e.g.
-│                         `1.0-jqp-initial-data-exploration`.
-│
-├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-│   └── figures        <- Generated graphics and figures to be used in reporting
-│
-├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-│                         generated with `pip freeze > requirements.txt`
-│
-├── setup.cfg          <- Configuration file for flake8
-│
-└── housing_in_mexico   <- Source code for use in this project.
-    │
-    ├── __init__.py             <- Makes housing_in_mexico a Python module
-    │
-    ├── config.py               <- Store useful variables and configuration
-    │
-    ├── dataset.py              <- Scripts to download or generate data
-    │
-    ├── features.py             <- Code to create features for modeling
-    │
-    ├── modeling                
-    │   ├── __init__.py 
-    │   ├── predict.py          <- Code to run model inference with trained models          
-    │   └── train.py            <- Code to train models
-    │
-    └── plots.py                <- Code to create visualizations
-```
+🛠️ Technologies
+Python
+Pandas — data processing
+Scikit-learn — machine learning
+FastAPI — REST API
+Pytest — automated testing
+Docker — containerization
+Docker Hub — container image registry
+Azure Container Apps — cloud deployment
+📁 Project Structure
+housing_in_mexico/
+├── data/
+│   ├── raw/
+│   └── processed/
+├── models/
+│   └── rf_model.pkl
+├── notebooks/
+├── src/
+│   ├── data.py
+│   ├── model.py
+│   └── main.py
+├── tests/
+│   ├── test_data.py
+│   ├── test_model.py
+│   └── test_main.py
+├── Dockerfile
+├── requirements.txt
+└── README.md
 
---------
+🔌 API
 
+The model is exposed through a FastAPI endpoint:
+
+POST /predict
+
+
+Example request:
+
+{
+  "area": 60,
+  "lat": 19.9,
+  "lon": -99.8
+}
+
+
+The API returns the predicted housing price.
+
+Swagger documentation is available at:
+
+/docs
+
+🧪 Testing
+
+The project includes automated tests for data processing, model predictions, and the FastAPI endpoint.
+
+Run the tests with:
+
+pytest -v
+
+🐳 Docker
+
+Build the image:
+
+docker build -t mexico_housing_api .
+
+
+Run the container:
+
+docker run -p 8000:8000 mexico_housing_api
+
+
+The API will then be available at:
+
+http://localhost:8000
+
+☁️ Deployment
+
+The application is containerized with Docker and deployed to Azure Container Apps using an image stored in Docker Hub.
+
+The next stage of the project is to implement GitHub Actions CI/CD to automatically:
+
+Run tests
+Build the Docker image
+Push the image to Docker Hub
+Deploy the new version to Azure
+📌 Project
+
+GitHub repository:
+
+https://github.com/MohamedMohsen20501990/Housing_in_Mexico.git
