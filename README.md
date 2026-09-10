@@ -15,7 +15,7 @@ Saved ML Model
    ↓
 FastAPI
    ↓
-Pytest
+Automated Testing
    ↓
 Docker
    ↓
@@ -33,7 +33,7 @@ Docker — Containerization
 Docker Hub — Container image registry
 Azure Container Apps — Cloud deployment
 📁 Project Structure
-housing_in_mexico/
+Housing_in_Mexico/
 │
 ├── data/
 │   ├── raw/                  # Original datasets
@@ -54,13 +54,19 @@ housing_in_mexico/
 │   ├── test_model.py         # Model tests
 │   └── test_main.py          # API tests
 │
+├── utils/                    # Utility modules
+│
 ├── Dockerfile                # Docker image configuration
+├── .dockerignore             # Files excluded from Docker image
+├── .gitignore                # Files excluded from Git
 ├── requirements.txt          # Python dependencies
 └── README.md                 # Project documentation
+
 🔌 API
 
-The trained model is exposed through a FastAPI REST endpoint:
+The trained model is exposed through a FastAPI REST API.
 
+Endpoint
 POST /predict
 
 Example Request
@@ -73,9 +79,11 @@ Example Request
 
 The API returns the predicted housing price.
 
+API Documentation
+
 Interactive Swagger documentation is available at:
 
-/docs
+http://localhost:8000/docs
 
 🧪 Testing
 
@@ -113,7 +121,7 @@ The application is containerized using Docker and the image is stored on Docker 
 
 The container is deployed to Azure Container Apps, allowing the FastAPI application and trained ML model to run in the cloud.
 
-Deployment workflow
+Deployment Workflow
 Docker Image
      ↓
 Docker Hub
@@ -126,7 +134,7 @@ ML Prediction
 
 🔄 CI/CD — Planned
 
-The next stage of the project is to implement GitHub Actions CI/CD to automate the deployment workflow:
+The next stage of the project is to implement GitHub Actions CI/CD to automate the deployment workflow.
 
 Git Push
    ↓
@@ -142,4 +150,4 @@ Deploy to Azure
 
 The complete source code is available on GitHub:
 
-https://github.com/MohamedMohsen20501990/Housing_in_Mexico.git
+https://github.com/MohamedMohsen20501990/Housing_in_Mexico
