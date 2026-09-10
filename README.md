@@ -20,47 +20,50 @@ Automated Testing
 Docker
    ↓
 Docker Hub
-   ↓
-Azure Container Apps
 
-🛠️ Technologies
-Python
-Pandas — Data processing
-Scikit-learn — Machine learning
-FastAPI — REST API
-Pytest — Automated testing
-Docker — Containerization
-Docker Hub — Container image registry
-Azure Container Apps — Cloud deployment
-📁 Project Structure
-Housing_in_Mexico/
+
+## 🛠️ Technologies
+
+- **Python**
+- **Pandas** — Data processing
+- **Scikit-learn** — Machine learning
+- **FastAPI** — REST API
+- **Pytest** — Automated testing
+- **Docker** — Containerization
+- **Docker Hub** — Container image registry
+- **Azure Container Apps** — Cloud deployment
+
+## 📁 Project Structure
+
+```text
+housing_in_mexico/
 │
 ├── data/
-│   ├── raw/                  # Original datasets
-│   └── processed/            # Processed datasets
+│   ├── raw/
+│   └── processed/
 │
 ├── models/
-│   └── rf_model.pkl          # Trained Random Forest model
+│   └── rf_model.pkl
 │
-├── notebooks/                # Jupyter notebooks
+├── notebooks/
 │
 ├── src/
-│   ├── data.py               # Data processing
-│   ├── model.py              # Model loading & prediction
-│   └── main.py               # FastAPI application
+│   ├── data.py
+│   ├── model.py
+│   └── main.py
 │
 ├── tests/
-│   ├── test_data.py          # Data processing tests
-│   ├── test_model.py         # Model tests
-│   └── test_main.py          # API tests
+│   ├── test_data.py
+│   ├── test_model.py
+│   └── test_main.py
 │
-├── utils/                    # Utility modules
+├── utils/
 │
-├── Dockerfile                # Docker image configuration
-├── .dockerignore             # Files excluded from Docker image
-├── .gitignore                # Files excluded from Git
-├── requirements.txt          # Python dependencies
-└── README.md                 # Project documentation
+├── Dockerfile
+├── .dockerignore
+├── .gitignore
+├── requirements.txt
+└── README.md
 
 🔌 API
 
