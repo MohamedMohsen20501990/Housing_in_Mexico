@@ -57,7 +57,6 @@ housing_in_mexico/
 ├── Dockerfile                # Docker image configuration
 ├── requirements.txt          # Python dependencies
 └── README.md                 # Project documentation
-
 🔌 API
 
 The trained model is exposed through a FastAPI REST endpoint:
