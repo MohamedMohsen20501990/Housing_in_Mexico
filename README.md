@@ -149,7 +149,7 @@ Push Image to Docker Hub
    ↓
 Deploy to Azure
 
-📌 Project Repository
+📌 Project Repository 
 
 The complete source code is available on GitHub:
 
