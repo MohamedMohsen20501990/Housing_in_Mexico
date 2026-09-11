@@ -1,5 +1,14 @@
 🏠 Mexico Housing Price Prediction
 
+🚀 FastAPI ML API — Microsoft Azure
+
+The FastAPI machine learning application is deployed and running on Microsoft Azure Container Apps.
+
+🔗 API Documentation (Swagger UI):
+https://mexico-housing-app.bravefield-76526380.uaecentral.azurecontainerapps.io/docs
+
+The API provides an interactive interface for testing the available endpoints and making predictions using the deployed machine learning model.
+
 An end-to-end Machine Learning project for predicting housing prices in Mexico using a Random Forest Regressor.
 
 The project covers the complete workflow from data preparation and model training to automated testing, API development, containerization, and cloud deployment.
