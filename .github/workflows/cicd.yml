@@ -1,0 +1,59 @@
+name: ci/cd-mexico_housing_app
+
+# trigger the work floe on push request to the main branch[event]
+on:
+  push:
+    branches: [ main ]
+
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout code from repo
+      #use a template action
+        uses: actions/checkout@v4
+
+      - name: set up python
+        uses:  actions/setup-python@v5
+        with:
+          python-version: '3.14'
+
+      - name: install dependencies
+        run: |
+
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name:
+        run: |
+          pytest
+
+  build-and-publish:
+    needs: build-and-test
+    runs-on: ubuntu-latest
+
+
+    steps:
+      - name: checkout  code
+        uses: actions/checkout@v4
+
+      - name: setup docker
+        uses: docker/setup-buildx-action@v3  
+        with: 
+          username: ${{secrets.DOCKER_USERNAME}}
+          password: ${{secrets.DOCKER_PASSWORD}}
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v6
+        with:
+          conntext: .
+          push: true
+          tags: ${{secrets.DOCKER_USERNAME}}/mexico_housing_app:latest
+          
+      - name: Image digest
+        run: echo ${{steps.build-and-publish.outputs.digest}}    
+
+
+

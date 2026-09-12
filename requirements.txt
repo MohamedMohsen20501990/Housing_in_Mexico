@@ -2,4 +2,4 @@ fastapi[standard]==0.141.1
 pandas==3.0.5
 pydantic==2.13.5
 pytest==9.1.1
-scikit-learn
+scikit-learn==1.7.2
